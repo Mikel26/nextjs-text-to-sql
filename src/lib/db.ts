@@ -1,9 +1,20 @@
 import { Pool } from "pg";
 
-// Pool conectado con el rol de SOLO LECTURA (ver db/readonly_role.sql).
-export const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+const connectionString = process.env.DATABASE_URL;
 
-// Ejecuta dentro de una transaccion READ ONLY: capa extra de defensa.
+// Postgres en la nube (Neon, Supabase, etc.) requiere SSL; en local (Docker) no.
+const isLocal =
+  !connectionString ||
+  connectionString.includes("localhost") ||
+  connectionString.includes("127.0.0.1");
+
+// Idealmente el DATABASE_URL usa un rol de SOLO LECTURA (ver db/readonly_role.sql).
+export const pool = new Pool({
+  connectionString,
+  ssl: isLocal ? undefined : { rejectUnauthorized: false },
+});
+
+// Transacción READ ONLY: ningún write puede ocurrir aquí, sin importar el rol.
 export async function runReadonlyQuery(sql: string) {
   const client = await pool.connect();
   try {
