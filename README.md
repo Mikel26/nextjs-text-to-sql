@@ -6,6 +6,8 @@ Feature de **text-to-SQL** ("pregúntale a tus datos en lenguaje natural") para 
 
 ## Demo
 
+**▶ Pruébalo en vivo:** https://nextjs-text-to-sql-green.vercel.app/
+
 Escribe *"¿Cuánto vendimos por ciudad?"* y obtienes el SQL generado + la tabla de resultados, contra una base de datos demo.
 
 ## ⚡ Quickstart
@@ -52,8 +54,8 @@ La versión **Pro** añade lo necesario para producción seria:
 - 🔓 Defensas reforzadas contra prompt injection (P2SQL)
 - 🔓 Set de **evals** para medir precisión antes de lanzar
 
-→ Guía completa + repo Pro: **[enlace]**
-→ Cómo blindarlo, explicado paso a paso: **[enlace al post]**
+→ Guía completa + repo Pro: **(próximamente — tu link de Gumroad)**
+→ Cómo blindarlo, explicado paso a paso: **(próximamente — tu link al post)**
 
 ## ⚠️ Aviso
 
