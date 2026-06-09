@@ -55,7 +55,7 @@ La versión **Pro** añade lo necesario para producción seria:
 - 🔓 Set de **evals** para medir precisión antes de lanzar
 
 → Guía completa + repo Pro: **[lista de espera en Gumroad](https://mikeo6.gumroad.com/l/ffuzxy)**
-→ Cómo blindarlo, explicado paso a paso: **(próximamente — tu link al post)**
+→ Cómo blindarlo, explicado paso a paso: **(próximamente)**
 
 ## ⚠️ Aviso
 
